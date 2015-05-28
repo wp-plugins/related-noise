@@ -2,11 +2,11 @@
 ob_start();
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 /*
-* Plugin Name: Relnoise
-* Description: It has two fields Feed ID and Access Token. put this [relatednoise] shortcode into page.
+* Plugin Name: Related Noise
+* Description: It needs two input, Feed ID and Access Token. Add [relatednoise] shortcode into your page, post and widgets to get real time social media content.
 * Version: 1.0
-* Author: BizBrolly
-* Author URI: http://BizBrolly.com
+* Author: Related Noise
+* Author URI: https://relatednoise.com/
 */
 
 //action hook for plugin activation
