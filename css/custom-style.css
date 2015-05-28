@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Classic
+   ========================================================================== */
+.row > span {
+    float: left;
+    width: 109px !important;
+}
+.row > input[type="text"] {
+    width: 42%;
+}
+.row{
+padding:5px;
+}
+#access_feed {
+    margin-top: 40px;
+}
+
+#toplevel_page_noise-plugin .wp-menu-image img {
+     opacity: 1 !important;
+    padding: 0 !important;
+    position: relative;
+    top: -28px;
+    width: 23px;
+}
+/*** 22 May 2015***/
+
+.realated-noise-main > table {
+    width: 99%;
+}
+.realated-noise-main{
+margin-top:50px;
+}
+.relnoise-msg {
+    font-style: oblique;
+    margin-left: 7%;
+}
