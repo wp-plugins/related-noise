@@ -1,5 +1,5 @@
 === Related Noise ===
-Contributors: relatednoise
+Contributors: Related Noise
 Donate link: https://relatednoise.com/
 Tags: related, noise
 Requires at least: 2.5
@@ -8,19 +8,19 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A plugin to power your website with the best content of your interest from social media using a very smart code available in shortcode.
+A plug-in to power your website with the best content from social media.
 
 == Description ==
 
-A plugin to power your website with the best content of your interest from social media using a very smart code available in shortcode.
+A plug-in to power your website with the best content from social media.
 
 Features:
 
-* Available as a shortcode
+* Available as a Shortcode
 * Localization based on your WordPress's installation language
-* Add acces token and feed ID 
+* Add access token and feed ID 
 * update existing form fields
-* Delete existing record if required
+
 
 
 == Installation ==
@@ -34,36 +34,34 @@ Verify that you have the following minimum requirements:
 = Installing Related Noise =
 
 1. Upload `related-noise` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Activate the plug-in through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
 
 = How do I use this plugin? =
 
-Go to `Related Noise` menu at the left and fill the form fields.
+Go to `Related Noise` menu at the left and fill the form fields like FeedId and Access Token
 
 = How do I use the shortcode? =
 
-After creating a record then you can use shortcode where you want like posts, pages, and widget.`
+After entering FeedId and Access Token, you can add shortcode [relatednoise] on your posts, pages, and widget.`
 
 
 
 == Screenshots ==
 
-1. The complete plug-in with all sections collapsed.
+1. Fields which is required to be filled in order to use this Plugin.
+
 
 == Changelog ==
 
-
 = 1.0 =
-* Renamed plugin to `Related Noise`
+* Published plug-in `Related Noise`
 
 
 == Upgrade Notice ==
-
 
 = 1.0 =
 This version is the official release.
 
 == Future Development ==
-* Admin panel localization
