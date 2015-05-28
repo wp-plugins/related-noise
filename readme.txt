@@ -51,7 +51,9 @@ After entering FeedId and Access Token, you can add shortcode [relatednoise] on 
 == Screenshots ==
 
 1. Fields which is required to be filled in order to use this Plugin.
-
+2. Form values with Shortcode.
+3. Using Shortcode in page.
+4. Output of the plug-in on front end.
 
 == Changelog ==
 
