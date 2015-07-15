@@ -8,13 +8,11 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A plug-in to power your website with the best content from social media.
+Hook up your Wordpress blog with beautiful social feeds of the best real-time content from across social media about whatever you’re in to. 
 
 == Description ==
 
-A plug-in to power your website with the best content from social media.
-
-Features:
+Related Noise provides an easy-to-use, free plugin that lets you create a real-time, beautiful social feed of the best content from across social media about whatever you’re in to.  
 
 
 
