@@ -8,14 +8,11 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Hook up your Wordpress blog with beautiful social feeds of the best real-time content from across social media about whatever you’re in to. 
+Hook up your Wordpress blog or website with beautiful, real-time social feeds about whatever topic of interest your content is about…for FREE. 
 
 == Description ==
 
-Related Noise provides an easy-to-use, free plugin that lets you create a real-time, beautiful social feed of the best content from across social media about whatever you’re in to.  
-
-
-
+With Related Noise you can create beautiful social feeds about whatever you’re interested in and plug it into your Wordpress website or blog…for FREE.The two biggest problems facing websites and blogs are bounce rate, and engagement. People come to your blog or website because they found a link promoted on one of the social networks, but after they come to your site to read the article…they leave. With Related Noise social feeds, you can create contextually relevant feeds that include curated or automated content about the same topic of interest as your blog. If you’re a fashion blogger, create a Related Noise feed about fashion for FREE and use this plugin to add it to your site. You’ll be amazed at the increased engagement and the length of time people stay on your site discovering more awesome content.
 
 
 == Installation ==
@@ -40,7 +37,7 @@ Verify that you have the following minimum requirements:
 
 == Screenshots ==
 
-1. Fields which is required to be filled in order to use this Plugin.
+1. 
 
 
 == Changelog ==
