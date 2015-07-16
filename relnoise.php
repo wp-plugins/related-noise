@@ -95,7 +95,7 @@ $helloworld_id = $wpdb->get_results("SELECT * FROM $table_name");
 $accessID = $helloworld_id[0]->access_token;
 $feedID = $helloworld_id[0]->feed_id;
  ?>
-<script type="text/javascript" id="<?php echo $accessID?>">
+<script type="text/javascript" id="<?php echo $feedID?>">
 (function(d, s, t, f){
  var ss = f.substring(0,5);
  var js, fjs = d.getElementsByTagName(s)[0];
@@ -104,8 +104,8 @@ $feedID = $helloworld_id[0]->feed_id;
  js.src = [ 'https:', '/', 'relatednoise.com', 'loader', f, t].join('/');
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script',
-'<?php echo $feedID;?>',
-'<?php echo $accessID;?>'));
+'<?php echo $accessID;?>',
+'<?php echo $feedID;?>'));
 </script>
 <?php }
 add_shortcode('relatednoise', 'form_creation');
