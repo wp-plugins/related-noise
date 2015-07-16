@@ -101,7 +101,7 @@ $feedID = $helloworld_id[0]->feed_id;
  var js, fjs = d.getElementsByTagName(s)[0];
  if (d.getElementById(ss)) {return;}
  js = d.createElement(s); js.id = ss;
- js.src = [ 'https:', '', 'relatednoise.com', 'loader', f, t].join('/');
+ js.src = [ 'https:', '/', 'relatednoise.com', 'loader', f, t].join('/');
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script',
 "<?php echo $accessID;?>",
