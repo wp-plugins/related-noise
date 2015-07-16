@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
 		var access_token = $('#access_token').val();
 		if(feed_id==''){
 			$('#access_token').css('border','none');
-			$('#feed_id').css('border','1px solid red');	
+			$('#feed_id').css('border','1px solid red');
 				return false;
 		}else if(access_token==''){
 			$('#feed_id').css('border','none');
@@ -12,6 +12,4 @@ jQuery(document).ready(function($){
 		return false;
 		}
 	});
-	
-	
 });
