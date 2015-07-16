@@ -15,7 +15,7 @@ register_activation_hook( __FILE__, 'callback_plugin' );
 //callback function
 function callback_plugin(){
 global $wpdb;
-$table_name = $wpdb->prefix . "relatednoise"; 
+$table_name = $wpdb->prefix . "relatednoise";
 if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
     $sql = "CREATE TABLE $table_name (
       `id` int NOT NULL AUTO_INCREMENT,
@@ -33,7 +33,7 @@ if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") != $table_name) {
 <?php
 /********** Insert related noise form data into database table ***********/
 $submit_button = isset($_POST['submit_button'])?sanitize_text_field($_POST['submit_button']):'';
-if($submit_button!=''){ 
+if($submit_button!=''){
  global $wpdb;
  $accessToken = sanitize_text_field($_POST['access_token']);
  $feed_id = sanitize_text_field($_POST['feed_id']);
@@ -42,7 +42,7 @@ if($submit_button!=''){
  if($accessToken!='' && $feed_id!=''){ // emptiness validation check start
  $accesLen = strlen( $accessToken );
  $feedLen = strlen( $feed_id );
-if( ( $accesLen >= 30 && $accesLen <=40) && ( $feedLen >= 30 && $feedLen <=40) ){ // maximum length validation check start	 
+if( ( $accesLen >= 30 && $accesLen <=40) && ( $feedLen >= 30 && $feedLen <=40) ){ // maximum length validation check start
  if($submit_button=='Submit' && !$myrows){
 $isertmsg = $wpdb->insert( $table_name,
 array( 'feed_id' => $feed_id,
@@ -61,7 +61,7 @@ if($submit_button=='Update'){
 	$_SESSION['relnoisemsg']=$relnoisemsg;
 	}
 }
- 
+
  }else{ // maximum length validation check end
 	 $relnoisemsg = '<span class="relnoise-msg" style="color:red;">Characters Length of Access Token and Feed ID  must be between 30 to 40.</span>';
 	$_SESSION['relnoisemsg']=$relnoisemsg;
@@ -70,14 +70,14 @@ if($submit_button=='Update'){
 	 $relnoisemsg = '<span class="relnoise-msg" style="color:red;">Access Token and Feed ID must not be Blank!</span>';
 	$_SESSION['relnoisemsg']=$relnoisemsg;
  }
-} 
+}
 
 /********** Delete  related noise selected record from database table where "id" matched start***********/
 $DeleteShortcode = isset($_REQUEST['DeleteShortcode'])?sanitize_text_field($_REQUEST['DeleteShortcode']):'';
 if($DeleteShortcode!=''){
 global $wpdb;
 $table_name = $wpdb->prefix . 'relatednoise';
-$delmsg = $wpdb->query($wpdb->prepare("DELETE FROM $table_name WHERE id = %d",$DeleteShortcode));	
+$delmsg = $wpdb->query($wpdb->prepare("DELETE FROM $table_name WHERE id = %d",$DeleteShortcode));
 if($delmsg){
 $relnoisemsg = '<span class="relnoise-msg" style="color:limegreen;">Record has been Deleted Successfully!</span>';
 $_SESSION['relnoisemsg']=$relnoisemsg;
@@ -86,16 +86,16 @@ header('Location:'.$_SERVER['PHP_SELF'].'?page=noise-plugin');
 }
 /********** Delete  related noise selected record from database table where "id" matched end***********/
 ?>
-<?php 
+<?php
 /******************* Generate Shortcode [relatednoise] Start *************************/
 function form_creation(){
 global $wpdb;
 $table_name = $wpdb->prefix . 'relatednoise';
 $helloworld_id = $wpdb->get_results("SELECT * FROM $table_name");
-$accessID = $helloworld_id[0]->access_token; 
+$accessID = $helloworld_id[0]->access_token;
 $feedID = $helloworld_id[0]->feed_id;
  ?>
-<script type="text/javascript" id="<?php echo $accessID?>">
+<script type="text/javascript" id="<?php echo $feedID?>">
 (function(d, s, t, f){
  var ss = f.substring(0,5);
  var js, fjs = d.getElementsByTagName(s)[0];
@@ -104,25 +104,25 @@ $feedID = $helloworld_id[0]->feed_id;
  js.src = [ 'https:', '', 'relatednoise.com', 'loader', f, t].join('/');
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script',
-"<?php echo $feedID;?>",
-"<?php echo $accessID;?>"));
+"<?php echo $accessID;?>",
+"<?php echo $feedID;?>"));
 </script>
-<?php } 
+<?php }
 add_shortcode('relatednoise', 'form_creation');
 /******************* Generate Shortcode [relatednoise] End *************************/
 ?>
-<?php 
+<?php
 /********** plug-in set up function for admin ***********/
-add_action('admin_menu', 'noise_plugin_setup_menu'); 
+add_action('admin_menu', 'noise_plugin_setup_menu');
 function noise_plugin_setup_menu(){
-		
+
         add_menu_page( 'Noise Plugin Page', 'Related Noise', 'manage_options', 'noise-plugin', 'noise_init' );
 }
 function noise_init(){
 ?>
 <div class="realated-noise-main">
-<h2>Related Noise <?php echo isset($_SESSION['relnoisemsg'])?$_SESSION['relnoisemsg']:'';?></h2> 
-<?php 
+<h2>Related Noise <?php echo isset($_SESSION['relnoisemsg'])?$_SESSION['relnoisemsg']:'';?></h2>
+<?php
 global $wpdb;
 $table_name = $wpdb->prefix . 'relatednoise';
 $myrows = $wpdb->get_results( "SELECT * FROM $table_name" );
@@ -148,7 +148,7 @@ if($myrows){
 <td>[relatednoise]</td>
 <td>
 <a href="<?php echo $_SERVER['PHP_SELF'].'?page=noise-plugin&EditShortcode='.$rows->id; ?>">Edit</a> |
-<a href="<?php echo $_SERVER['PHP_SELF'].'?page=noise-plugin&DeleteShortcode='.$rows->id;?>" onclick="return confirm('Are you sure?')">Delete</a> 
+<a href="<?php echo $_SERVER['PHP_SELF'].'?page=noise-plugin&DeleteShortcode='.$rows->id;?>" onclick="return confirm('Are you sure?')">Delete</a>
 </td>
 </tr>
 <?php } ?>
@@ -165,7 +165,7 @@ if($myrows){
 </tfoot>
 </table>
 
-<?php } 
+<?php }
 
 /********** Update related noise selected record where "id" matched start***********/
 $EditShortcode = isset($_REQUEST['EditShortcode'])?sanitize_text_field($_REQUEST['EditShortcode']):'';
@@ -198,7 +198,7 @@ $record = $wpdb->get_results( "SELECT * FROM $table_name WHERE id='".$EditShortc
 function enqueue_admin_scripts() {
 	//wp_register_script('script', plugins_url('js/jquery-latest.js.js', __FILE__), array('jquery'),'1.1', true);
 	//wp_enqueue_script('script');
-	
+
 	wp_register_script('my_amazing_script', plugins_url('js/custom-jquery.js', __FILE__), array('jquery'),'1.1', true);
 	wp_enqueue_script('my_amazing_script');
 }
