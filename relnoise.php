@@ -104,8 +104,8 @@ $feedID = $helloworld_id[0]->feed_id;
  js.src = [ 'https:', '/', 'relatednoise.com', 'loader', f, t].join('/');
  fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script',
-"<?php echo $accessID;?>",
-"<?php echo $feedID;?>"));
+'<?php echo $accessID;?>',
+'<?php echo $feedID;?>'));
 </script>
 <?php }
 add_shortcode('relatednoise', 'form_creation');
